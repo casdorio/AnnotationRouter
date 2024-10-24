@@ -3,6 +3,7 @@
 namespace Casdorio\AnnotationRouter\Config;
 
 use CodeIgniter\Config\BaseConfig;
+use Casdorio\AnnotationRouter\Hooks;
 
 class Events extends BaseConfig
 {
