@@ -1,0 +1,20 @@
+{
+    "name": "casdorio/annotation-router",
+    "description": "teste",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Casdorio\\AnnotationRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "casdorio",
+            "email": "casdorio@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "codeigniter4/framework": "^4.0"
+    }
+}
