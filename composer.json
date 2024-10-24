@@ -1,22 +1,29 @@
 {
     "name": "casdorio/annotation-router",
-    "description": "teste",
+    "description": "A library to enable route annotations in CodeIgniter 4",
     "type": "library",
     "autoload": {
         "psr-4": {
             "Casdorio\\AnnotationRouter\\": "src/"
         }
     },
-    "minimum-stability": "stable",
-    "authors": [
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
         {
-            "name": "casdorio",
-            "email": "casdorio@gmail.com"
+            "type": "path",
+            "url": "../annotation-router"
         }
     ],
     "require": {
         "php": "^7.3|^8.0",
         "codeigniter4/framework": "^4.0"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "casdorio",
+            "email": "casdorio@gmail.com"
+        }
+    ]
 }
