@@ -2,17 +2,15 @@
 
 namespace Casdorio\AnnotationRouter\Config;
 
-use CodeIgniter\Config\BaseConfig;
+use CodeIgniter\Events\Events;
 use Casdorio\AnnotationRouter\Hooks;
 
-class Events extends BaseConfig
-{
-    public function __construct()
-    {
-        // Aqui você pode adicionar um listener de evento para registrar as anotações
-        \CodeIgniter\Events\Events::on('post_system', function () {
-            $hook = new Hooks();
-            $hook->registerAnnotations();
-        });
-    }
-}
+// Depuração para verificar se o arquivo foi carregado
+var_dump("Arquivo Events carregado"); 
+
+Events::on('pre_system', function () {
+    // Depuração para verificar se o hook pre_system está sendo disparado
+    var_dump("Hook pre_system acionado");
+    
+    (new Hooks())->registerAnnotations();
+});
