@@ -7,7 +7,7 @@
             "Casdorio\\AnnotationRouter\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stability",
     "authors": [
         {
             "name": "casdorio",
