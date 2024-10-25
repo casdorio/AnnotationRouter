@@ -9,8 +9,6 @@ class Services extends BaseService
 {
     public static function hooks($getShared = true)
     {
-        print_r('hooks');
-        die;
         if ($getShared) {
             return static::getSharedInstance('hooks');
         }
