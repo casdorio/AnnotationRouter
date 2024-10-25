@@ -3,16 +3,18 @@
 namespace Casdorio\AnnotationRouter\Config;
 
 use CodeIgniter\Config\BaseService;
+use Casdorio\AnnotationRouter\Hooks\Hooks;
 
 class Services extends BaseService
 {
-    public static function events($getShared = true)
+    public static function hooks($getShared = true)
     {
+        print_r('hooks');
+        die;
         if ($getShared) {
-            return static::getSharedInstance('events');
+            return static::getSharedInstance('hooks');
         }
 
-        // Incluindo o arquivo de eventos do seu pacote
-        require_once __DIR__ . '/Events.php';
+        return new Hooks();
     }
 }

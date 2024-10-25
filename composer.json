@@ -9,12 +9,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../annotation-router"
-        }
-    ],
     "require": {
         "php": "^7.3|^8.0",
         "codeigniter4/framework": "^4.0"
@@ -25,5 +19,17 @@
             "name": "casdorio",
             "email": "casdorio@gmail.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "codeigniter4/devkit": "^1.2",
+        "phpunit/phpunit": "^10.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix --ansi --verbose --diff"
+    }
 }
