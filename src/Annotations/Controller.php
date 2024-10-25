@@ -5,7 +5,7 @@ namespace Casdorio\AnnotationRouter\Annotations;
 use Attribute;
 
 #[Attribute]
-class Controller
+class Controller extends Annotation
 {
     public function __construct(
         public ?string $path = '',

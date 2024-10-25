@@ -3,7 +3,7 @@
 namespace Casdorio\AnnotationRouter\Hooks;
 
 use CodeIgniter\Config\BaseConfig;
-use Casdorio\AnnotationRouter\Annotations\Controller;
+use Casdorio\AnnotationRouter\Annotations;
 use CodeIgniter\Exceptions\FrameworkException;
 
 class Hooks extends BaseConfig

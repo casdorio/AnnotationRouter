@@ -2,7 +2,7 @@
 
 namespace Casdorio\AnnotationRouter\Hooks;
 
-use Casdorio\AnnotationRouter\Annotations\Controller;
+use Casdorio\AnnotationRouter\Annotations;
 
 class ControllerHandler
 {

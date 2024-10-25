@@ -5,7 +5,7 @@ namespace Casdorio\AnnotationRouter\Annotations;
 use Attribute;
 
 #[Attribute]
-class ApiEndpoint
+class ApiEndpoint extends Annotation
 {
     public function __construct(
         public string $method,
