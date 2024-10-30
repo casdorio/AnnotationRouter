@@ -1,4 +1,3 @@
-````markdown
 # Annotation Router for CodeIgniter 4
 
 **Available in: [English](README.en.md)**
@@ -23,7 +22,6 @@ Execute o seguinte comando no terminal dentro do diretório do seu projeto CodeI
 ```bash
 composer require casdorio/annotation-router
 ```
-````
 
 ## Uso
 
