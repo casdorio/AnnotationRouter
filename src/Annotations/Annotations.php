@@ -2,19 +2,16 @@
 
 namespace Casdorio\AnnotationRouter\Annotations;
 
-abstract class Annotation
+use Casdorio\AnnotationRouter\Annotations\Route;
+use Casdorio\AnnotationRouter\Annotations\Controller;
+
+abstract class Annotations
 {
-    /**
-     * Retorna os padrões regex para identificar cada anotação.
-     * 
-     * @return array
-     */
     public static function getAnnotationPatterns(): array
     {
         return [
-            Controller::class => '/@Controller\s*\(path=["\']?(.*?)["\']?,?\s*options=(\{.*?\})?\)/',
-            ApiEndpoint::class => '/@ApiEndpoint\s*\(method=["\']?(.*?)["\']?,\s*path=["\']?(.*?)["\']?(,?\s*options=(\{.*?\}))?\)/',
-            // Adicione novas anotações conforme necessário
+            Controller::class => '/@Controller(?:\s*\(\s*path[=:]["\']?(.*?)["\']?(?:,\s*options[=:](\{.*?\}|\[.*?\]))?\s*\))?/',
+            Route::class => '/@Route\s*\(\s*method[=:]["\']?(.*?)["\']?,\s*path[=:]["\']?(.*?)["\']?\s*(?:,\s*options[=:](\{.*?\}|\[.*?\]))?\s*\)/',
         ];
     }
 }
