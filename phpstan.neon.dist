@@ -2,6 +2,7 @@ parameters:
 	tmpDir: build/phpstan
 	level: 6
 	paths:
+        - src/
 		- app/
 		- tests/
 	bootstrapFiles:

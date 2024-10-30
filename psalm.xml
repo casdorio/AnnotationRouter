@@ -11,6 +11,7 @@
     findUnusedCode="false"
 >
     <projectFiles>
+        <directory name="src/" />
         <directory name="app/" />
         <directory name="tests/" />
         <ignoreFiles>
