@@ -22,11 +22,17 @@
     ],
     "require-dev": {
         "codeigniter4/devkit": "^1.2",
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^10.5",
+        "icanhazstring/composer-unused": "^0.8.11",
+        "phpmetrics/phpmetrics": "^2.8",
+        "rector/rector": "^1.2",
+        "doctrine/coding-standard": "^12.0",
+        "squizlabs/php_codesniffer": "*"
     },
     "config": {
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "scripts": {

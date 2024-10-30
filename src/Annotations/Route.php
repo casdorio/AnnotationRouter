@@ -12,5 +12,6 @@ class Route extends Annotations
         public string $method,
         public string $path,
         public ?array $options = []
-    ) {}
+    ) {
+    }
 }

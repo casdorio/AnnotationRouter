@@ -69,7 +69,7 @@ class AnnotationProcessor
         if ($docComment) {
             $annotationData = AnnotationFactory::fromDocCommentForClass($docComment, $reflection, $annotationClass);
 
-            if (!empty($annotationData)) {
+            if ($annotationData instanceof \Casdorio\AnnotationRouter\Annotations\Annotations) {
                 $annotations[] = new $annotationClass(...array_values((array)$annotationData));
             }
         }

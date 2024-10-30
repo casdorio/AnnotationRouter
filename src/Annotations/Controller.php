@@ -11,5 +11,6 @@ class Controller extends Annotations
     public function __construct(
         public ?string $path = null,
         public ?array $options = null
-    ) {}
+    ) {
+    }
 }

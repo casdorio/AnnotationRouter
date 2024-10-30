@@ -7,7 +7,7 @@ use PhpCsFixer\Finder;
 $finder = Finder::create()
     ->files()
     ->in([
-        __DIR__ . '/src/',
+        __DIR__ . '/app/',
         __DIR__ . '/tests/',
     ])
     ->exclude([

@@ -16,7 +16,7 @@ class RouteRegistrar
 
     public function registerRoutes(Controller $controller, \ReflectionClass $reflectionClass)
     {
-        if (!empty($controller->path)) {
+        if ($controller->path !== null && $controller->path !== '' && $controller->path !== '0') {
             $this->registerRouteGroup($controller->path, $controller->options, $reflectionClass);
         } else {
             $this->annotationProcessor->processRoutesAnnotations($reflectionClass);
@@ -26,17 +26,21 @@ class RouteRegistrar
     public function registerRouteGroup(string $path, ?array $options, \ReflectionClass $controllerClass)
     {
         $routes = service('routes');
-        $routes->group($path, $options, function ($routes) use ($controllerClass) {
-            $this->annotationProcessor->processRoutesAnnotations($controllerClass);
-        });
+        $routes->group(
+            $path, $options, function ($routes) use ($controllerClass): void {
+                $this->annotationProcessor->processRoutesAnnotations($controllerClass);
+            }
+        );
     }
 
     public function registerRoute($annotationInstance, $method, \ReflectionClass $controllerClass)
     {
         $routes = service('routes');
-        $routes->{$annotationInstance->method}(ltrim($annotationInstance->path, '/'), [
+        $routes->{$annotationInstance->method}(
+            ltrim($annotationInstance->path, '/'), [
             $controllerClass->getName(),
             $method->getName()
-        ], $annotationInstance->options ?? []);
+            ], $annotationInstance->options ?? []
+        );
     }
 }

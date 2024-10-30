@@ -11,7 +11,7 @@ class ControllerAnnotationChecker
     {
         $attributes = $reflectionClass->getAttributes(Controller::class);
 
-        if (!empty($attributes)) {
+        if ($attributes !== []) {
             return true;
         }
 

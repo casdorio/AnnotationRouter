@@ -21,7 +21,7 @@ class ControllerProcessor
 
         $controllerFiles = FileHelper::getPhpFilesInDirectory($directory);
 
-        if (empty($controllerFiles)) {
+        if ($controllerFiles === []) {
             throw new FrameworkException('No controller files found in ' . $directory);
         }
 
