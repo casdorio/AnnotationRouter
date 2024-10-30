@@ -128,9 +128,3 @@ Sinta-se à vontade para contribuir para o projeto. Para isso:
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
-
-```
-
-
-
-```
